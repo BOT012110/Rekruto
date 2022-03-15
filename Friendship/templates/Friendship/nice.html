@@ -1,16 +1,18 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
         <title>Friendly page</title>
+        <link rel="stylesheet" href="{% static 'css/nice.css' %}">
     </head>
     <body>
-        {% for text in start_f %}
-        <div>
-            {{ text.name }}!
+        <div class="container">
+            <div class="name">
+                {{ name }}!
+            </div>
+            <div class="message">
+                {{ message }}!
+            </div>
         </div>
-        <div>
-            {{ text.message }}!
-        </div>
-        {% endfor %}
     </body>
 </html>

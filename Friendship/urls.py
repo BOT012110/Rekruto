@@ -1,6 +1,7 @@
 from django.urls import URLPattern, path
 from . import views
+from .models import StartFriendShip
 
 urlpatterns = [
-    path('', views.site, name="site"),
+    path('name=<name>&message=<message>', views.site, name="site"),
 ]
